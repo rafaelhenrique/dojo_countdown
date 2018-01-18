@@ -5,7 +5,6 @@ Countdown for coding dojo.
 This project is based on:
 
 - http://programarcadegames.com/
-- http://simpson.edu/computer-science/
 
 # Install
 
