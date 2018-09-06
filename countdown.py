@@ -16,7 +16,8 @@ warning_time = args.warning_time
 
 # Define alert sound
 pygame.mixer.init()
-alert = pygame.mixer.Sound('beep-01a.wav')
+finish = pygame.mixer.Sound('finish.wav')
+start = pygame.mixer.Sound('start.wav')
 
 # Define some colors
 BLACK = (0, 0, 0)
@@ -39,6 +40,9 @@ clock = pygame.time.Clock()
 font = pygame.font.Font(None, 70)
 frame_count = 0
 frame_rate = 60
+
+# Play start sound
+start.play()
 
 while not done:
     for event in pygame.event.get():  # User did something
@@ -79,7 +83,7 @@ while not done:
     pygame.display.flip()
 
     if minutes == 0 and seconds == 0:
-        alert.play()
+        finish.play()
         sleep(3)
         done = True
 
